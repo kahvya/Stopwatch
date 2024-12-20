@@ -1,0 +1,46 @@
+body{
+    background: #360033;
+    background: -webkit-linear-gradient(to right,#0b8793,#360033);
+    background: linear-gradient(to right,#0b8793,#360033);
+    font-family: nunito,sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#timer{
+    font-size: 7px;
+    font-weight: 600;
+    text-shadow: 2px 2px #5f5f56;
+    color: #F1F2B5;
+    width: 500px;
+    text-align: center;
+    margin: 40px auto;
+}
+
+#buttons{
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+    background: transparent;
+}
+
+button:hover{
+    background-color: #a4b6c9;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+button[disabled]{
+    opacity: .5;
+    cursor: default;
+}
+
+@media(max-width:800px){
+    #timer{
+        font-size: 4rem;
+        width: 350px;
+    }
+    button{
+        font-size: calc(20px+(30-20)*((100vw-320px)/(1200-320)));
+        padding: calc(20px+(50-20)*((100vw-320px)/(1200-320)));
+    }
+}
